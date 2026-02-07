@@ -3,7 +3,7 @@
 #### NLP-based extractive summarization using pretrained transformer models
 > AI-powered extractive text summarization system
 
-> using Sentence Transformers + MMR
+> using Sentence Transformers + MMR algorithm
 
 <h1 id = 'requirements'>Requirements</h1>
 
