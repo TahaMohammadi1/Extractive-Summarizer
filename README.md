@@ -26,7 +26,7 @@ pip install -r requirements.txt
 <a href = '#requirements'>requirements.txt </a>content
 
 # How to use? 
-
+Activate Virtual Enviroment in terminal
 ```
 .\venv\Scripts\activate
 ```
