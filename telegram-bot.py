@@ -1,5 +1,6 @@
 import os
 import sys
+import subprocess
 import asyncio 
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes, CommandHandler
@@ -14,7 +15,12 @@ def summarize_text(text) -> str :
      with open(input_path, "w", encoding="utf-8") as f:
           f.write(text)
 
-    
+     VENV_python = sys.executable
+
+     # run embed_sentences.py
+     subprocess.run([VENV_python, os.path.join(APP_FOLDER, "embed_sentences.py"), input_path], check=True)
+     
+
           
 
 
