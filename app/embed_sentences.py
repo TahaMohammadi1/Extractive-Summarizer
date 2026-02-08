@@ -13,8 +13,8 @@ def sentences_split(text):
 
 
 def embed_and_save(input_path):
-    output_sentences_path = "sentences.json"
-    output_embeded_path = "embeded.npy"
+    output_sentences_path = "app\sentences.json"
+    output_embedded_path = "app\embedded.npy"
 
     # read text
     with open(input_path, "r", encoding="utf-8") as f:
@@ -33,10 +33,10 @@ def embed_and_save(input_path):
         json.dump(sentences, f, ensure_ascii=False, indent=2)
 
     # save embeddings
-    np.save(output_embeded_path, embeddings)
+    np.save(output_embedded_path, embeddings)
 
     print(f"detected sentences saved in {output_sentences_path} file.")
-    print(f"embeddings saved in {output_embeded_path} file")
+    print(f"embeddings saved in {output_embedded_path} file")
     
 
 if __name__ == "__main__":
