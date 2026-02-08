@@ -4,6 +4,21 @@ import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes, CommandHandler
 
+APP_FOLDER = "app"
+
+def summarize_text(text) -> str :
+     input_path = os.path.join(APP_FOLDER, "input.txt")
+     summary_path = os.path.join(APP_FOLDER, "summary.txt")
+
+     #craete input.txt file
+     with open(input_path, "w", encoding="utf-8") as f:
+          f.write(text)
+
+    
+          
+
+
+
 # /start command handler
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Hi,  Im Extractive summarizer bot. Give me a long text and i will summarize it for you. ")
@@ -20,7 +35,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
      #process
 
      try:
-        summary = await asyncio.to_thread(summarize_text, user_text) # we will create summarize_text function later
+        summary = await asyncio.to_thread(summarize_text, user_text) 
         await update.message.reply_text(summary)
      except Exception as e:
         error = str(e)
