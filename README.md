@@ -5,6 +5,8 @@
 
 > using Sentence Transformers + MMR algorithm
 
+> with telegram bot API
+
 <h1 id = 'requirements'>Requirements</h1>
 
 - numpy
