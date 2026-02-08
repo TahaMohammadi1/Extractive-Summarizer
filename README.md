@@ -15,7 +15,7 @@
 - sentence-transformers
 
 # Create Virtual Enviroment
-In project's folder open terminal:
+In first time of using, in project's folder open terminal:
 
 ```
 python -m venv venv
@@ -24,3 +24,9 @@ pip install -r requirements.txt
 ```
 
 <a href = '#requirements'>requirements.txt </a>content
+
+# How to use? 
+
+```
+.\venv\Scripts\activate
+```
