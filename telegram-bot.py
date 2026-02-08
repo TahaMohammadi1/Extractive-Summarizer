@@ -3,10 +3,19 @@ from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTyp
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-        await update.message.reply_text("Hi,  Im Extractive summarizer bot. give me a long text and i will summarize it for you. ")
+        await update.message.reply_text("Hi,  Im Extractive summarizer bot. Give me a long text and i will summarize it for you. ")
 
 
+async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+     user_text = update.message.text
 
+     #response
+     await update.message.reply_text("َALright, just a moment ...")
+     await update.message.reply_text("👾")
+
+     #process
+     
+     
 
 
 # Run bot
