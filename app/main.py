@@ -12,7 +12,7 @@ def main():
         sys.exit(1)
 
     # Choose important sentences with MMR
-    summary, idxs, scores = mmr_select(embs, sents, summary_size=5, lambda_param=0.7)
+    summary, idxs, scores = mmr_select(embs, sents, summary_size=3, lambda_param=0.7)
 
     # Post-process
     summary_clean = clean_summary(summary)
