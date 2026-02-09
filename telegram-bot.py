@@ -15,14 +15,28 @@ def summarize_text(text) -> str :
      with open(input_path, "w", encoding="utf-8") as f:
           f.write(text)
 
+     # remove old files of Embedding
+     for file_name in ["sentences.json", "embedded.npy"]:
+          path = os.path.join(APP_FOLDER, file_name)
+          if os.path.exists(path):
+               os.remove(path)
+
+     # remove old summary.txt file
+     if os.path.exists(summary_path):
+          os.remove(summary_path)
+
+
      VENV_python = sys.executable
 
      # run embed_sentences.py
      subprocess.run([VENV_python, os.path.join(APP_FOLDER, "embed_sentences.py"), input_path], check=True)
-     
+     subprocess.run([VENV_python, os.path.join(APP_FOLDER, "main.py"), input_path], check = True)
 
-          
+     # read new summary.txt
+     with open(summary_path, "r", encoding="utf-8") as f:
+          summary = f.read()
 
+     return summary
 
 
 # /start command handler
