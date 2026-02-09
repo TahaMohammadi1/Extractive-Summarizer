@@ -2,8 +2,8 @@ import json
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity  #similarity for two vector
 
-SENT_PATH = "sentences.json"
-EMB_PATH = "embedded.npy"
+SENT_PATH = "app\sentences.json"
+EMB_PATH = "app\embedded.npy"
 
 def load_data(sent_path=SENT_PATH, emb_path=EMB_PATH):
     with open(sent_path, "r", encoding="utf-8") as f:
