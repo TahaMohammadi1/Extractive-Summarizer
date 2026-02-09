@@ -38,9 +38,6 @@ def summarize_text(text) -> str :
      return summary
 
 
-
-
-
 # ====== GUI LOGIC ======
 def on_summarize():
     input_text = input_textbox.get("1.0", tk.END).strip()
