@@ -1,4 +1,4 @@
-# Extractive Summarizer ,⌛ in progress
+# Extractive Summarizer
 
 #### NLP-based extractive summarization using pretrained transformer models
 > AI-powered extractive text summarization system
